@@ -14,6 +14,8 @@ let getTime = () => {
     clock.innerHTML = string;
 
 }
+
 getTime();
+
 setInterval(getTime,1000);
 
