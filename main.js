@@ -15,9 +15,21 @@ let getTime = () => {
 
 }
 
+let getName = () =>{
+    
+    let button = document.getElementById("btn");
+    button.onclick = () => {
+        let name = document.getElementById("inputName").value;
+        document.getElementById("name").innerHTML = name;
+    };
+
+    
+}
+
 let main = () => {
     getTime();
     setInterval(getTime,1000);
+    getName();
 }
 
 main();
