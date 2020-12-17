@@ -1,6 +1,6 @@
-let clock = document.getElementById('js-clock');
-
 let getTime = () => {
+    let clock = document.getElementById('js-clock');
+
     let date  = new Date();
 
     let hour = date.getHours();
@@ -15,7 +15,10 @@ let getTime = () => {
 
 }
 
-getTime();
+let main = () => {
+    getTime();
+    setInterval(getTime,1000);
+}
 
-setInterval(getTime,1000);
+main();
 
