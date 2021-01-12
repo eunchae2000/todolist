@@ -3,21 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel= "stylesheet" href = "main.css"/>
+    <title>TO DO LIST</title>
 </head>
 <body>
-    <div>
-        <input type="text" id="inputName" placeholder="입력"/>
-        <input type="button" id="btn" value="클릭">
-        <p id="name"></p>
+    <div class= "js-clock">
+        <h1>00:00</h1>
     </div>
-    <div>
-        <div id="js-clock"></div>
+   
+    <div id="js-clock">
+        <h1>00:00</h1>
     </div>
-    <div>
+
+    <form class="js-form form">
+        <input type="text" placeholder="What is your name?"/>
+    </form>
+    <h2 class="js-greeting greeting"></h2>
 
     </div>
-    <script src="./main.js">
-    </script>
+
+    <script src = "./clock.js"></script>
+    <script src= "./greeting.js"></script>
 </body>
 </html>
