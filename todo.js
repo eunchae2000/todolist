@@ -6,13 +6,6 @@ const TODO_LS = "toDo";
 
 let toDo = [];
 
-function handleSubmit(event){
-    event.preventDefault();
-    const currentValue = toDoInput.value;
-    paintToDo(currentValue);
-    toDoInput.value = "";
-}
-
 function saveToDo(){
     localStorage.setItem(TODO_LS, JSON.stringify(toDo));
 }
@@ -26,6 +19,13 @@ function deleteToDo(event){
     });
     toDo = cleanToDo;
     saveToDo();
+}
+
+function handleSubmit(event){
+    event.preventDefault();
+    const currentValue = toDoInput.value;
+    paintToDo(currentValue);
+    toDoInput.value = "";
 }
 
 function paintToDo(text){
@@ -42,7 +42,6 @@ function paintToDo(text){
     li.appendChild(delBtn);
     li.id = newId;
 
-
     toDoList.appendChild(li);
     const toDoObj = {
         text : text,
@@ -52,18 +51,18 @@ function paintToDo(text){
     saveToDo();
 }
 
-function loadName(){
+function loadToDo(){
     const loadToDo = localStorage.getItem(TODO_LS);
     if(loadToDo !== null){
         const parsedToDo = JSON.parse(loadToDo);
         parsedToDo.forEach(function(toDo){
-            paintToDo(toDo.text);    
+            paintToDo(toDo.text);
         });
-    } 
+    }
 }
 
 function init(){
-    loadName();
+    loadToDo();
     toDoForm.addEventListener("submit", handleSubmit);
 }
 

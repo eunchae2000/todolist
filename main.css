@@ -10,12 +10,59 @@ body{
 h1{
     transition: color 0.5s ease-in-out;
     text-align: top;
+    font-size: 50;
+}
+
+h4{
+    color: azure;
+    font-size: medium;
+}
+
+ul{
+    color: azure;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+button{
+    border: none;
+    background-image: none;
+    background-color: transparent;
+}
+
+.beimage{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 120%;
+    height: 120%;
+    z-index: -1;
+    animation: fadeIn 0.5s linear;
 }
 
 .js-clock{
-    font-size: 40px;
+    margin-top: 10%;
+    font-size: 70px;
+    color: #fffafa;
+    font-style:inherit;
+    font-weight: 700;
 }
 
 .js-form{
     display: none;
+    
+}
+
+.js-greeting{
+    font-size: 30px;
+}
+
+.js-todoform{
+    background-color: transparent;
+}
+
+input::placeholder{
+    color: aliceblue;
+    text-align: center;
 }
