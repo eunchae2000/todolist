@@ -62,6 +62,12 @@ button{
     background-color: transparent;
 }
 
+.js-weather{
+    margin-left: 30px;
+    color: white;
+    font-size: 20px;
+}
+
 input::placeholder{
     color: aliceblue;
     text-align: center;
